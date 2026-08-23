@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sauerninja.github.io/fire-and-ice/sitemap.xml

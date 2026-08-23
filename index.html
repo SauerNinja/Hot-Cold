@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) with Consent Mode v2 -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied',
+    'ad_storage': 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FIREANDICE1"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-FIREANDICE1');
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fire and Ice: The Psychology of the Hot-Cold Divide</title>
+<meta name="description" content="A research article on the hot-cold empathy gap, intermittent reinforcement, and the divided self — why comfort and crisis speak different languages, and what happens when they collide.">
+<meta name="keywords" content="hot cold empathy gap, intermittent reinforcement, DARVO, ego splitting, contempt Gottman, moral disengagement, psychology, Loewenstein">
+<link rel="canonical" href="https://sauerninja.github.io/fire-and-ice/">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fire and Ice: The Psychology of the Hot-Cold Divide">
+<meta property="og:description" content="Why the comfortable cannot feel the crisis of the cold, and why the cold cannot perform for the comfort of the warm — a research article on the hot-cold empathy gap.">
+<meta property="og:image" content="https://sauerninja.github.io/fire-and-ice/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Fire and Ice: The Psychology of the Hot-Cold Divide — ice and flame over a dark reflective surface">
+<meta property="og:url" content="https://sauerninja.github.io/fire-and-ice/">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fire and Ice: The Psychology of the Hot-Cold Divide">
+<meta name="twitter:description" content="Why the comfortable cannot feel the crisis of the cold, and why the cold cannot perform for the comfort of the warm.">
+<meta name="twitter:image" content="https://sauerninja.github.io/fire-and-ice/og-image.png">
+
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preload" as="image" href="hero.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Fire and Ice: The Psychology of the Hot-Cold Divide",
+  "description": "A research article on the hot-cold empathy gap, intermittent reinforcement, DARVO, and the divided self.",
+  "author": {"@type": "Person", "name": "Setvin Noether"},
+  "mainEntityOfPage": "https://sauerninja.github.io/fire-and-ice/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Fire and Ice",
+  "url": "https://sauerninja.github.io/fire-and-ice/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://sauerninja.github.io/fire-and-ice/"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the hot-cold empathy gap?",
+      "acceptedAnswer": {"@type": "Answer", "text": "A cognitive bias, formalized by behavioral economist George Loewenstein, describing how people in a comfortable state consistently underestimate how much a visceral state — pain, cold, exhaustion, fear — dictates behavior in someone experiencing it."}
+    },
+    {
+      "@type": "Question",
+      "name": "Why does intermittent reinforcement make a volatile dynamic feel more intense?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Unpredictable reward delivery produces larger dopamine surges than predictable reward, per reward-prediction-error research. Warmth that arrives unpredictably after friction is neurologically more potent than steady, reliable warmth."}
+    },
+    {
+      "@type": "Question",
+      "name": "What is DARVO?",
+      "acceptedAnswer": {"@type": "Answer", "text": "DARVO — Deny, Attack, Reverse Victim and Offender — is a response pattern identified by psychologist Jennifer Freyd in which a person confronted with accountability denies wrongdoing, attacks the accuser's credibility, and recasts themselves as the injured party."}
+    }
+  ]
+}
+</script>
+<style>
+  :root{
+    --obsidian:#0a0a0f;
+    --char:#14141b;
+    --ember:#ff5a2e;
+    --amber:#ffb454;
+    --ice:#6fd6e8;
+    --frost:#eaf7fb;
+    --steel:#26333d;
+    --paper:#f3efe8;
+    --line:#3a3a45;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--obsidian);
+    color:var(--frost);
+    font-family:'Source Serif 4','Georgia',serif;
+    line-height:1.75;
+  }
+  h1,h2,h3,.eyebrow,.nav-brand{font-family:'Fraunces','Georgia',serif;}
+  .mono{font-family:'JetBrains Mono','Courier New',monospace;letter-spacing:.04em;}
+
+  #progress-bar{
+    position:fixed;top:0;left:0;height:3px;width:0%;
+    background:linear-gradient(90deg,var(--ice),var(--frost) 45%,var(--amber) 55%,var(--ember));
+    z-index:999;transition:width .1s linear;
+  }
+
+  nav.top-nav{
+    position:sticky;top:0;z-index:900;
+    background:rgba(10,10,15,.88);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+    padding:14px 24px;
+  }
+  nav.top-nav .nav-brand{
+    color:var(--frost);font-size:1.15rem;font-weight:600;letter-spacing:.02em;
+  }
+  nav.top-nav .nav-brand span{color:var(--ember);}
+
+  .hero-wrap{width:100%;line-height:0;position:relative;}
+  .hero-wrap img{width:100%;height:min(60vh,520px);object-fit:cover;display:block;filter:saturate(1.1) contrast(1.05);}
+
+  .title-block{max-width:760px;margin:0 auto;padding:48px 24px 24px;text-align:center;}
+  .eyebrow{
+    color:var(--ice);text-transform:uppercase;letter-spacing:.22em;font-size:.75rem;font-weight:600;
+  }
+  h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.08;margin:14px 0 10px;
+     background:linear-gradient(100deg,var(--ice) 0%,var(--frost) 35%,var(--amber) 65%,var(--ember) 100%);
+     -webkit-background-clip:text;background-clip:text;color:transparent;}
+  .subtitle{color:#c9c9d6;font-size:1.15rem;font-weight:400;max-width:600px;margin:0 auto 18px;}
+  .meta-row{color:#8b8b98;font-size:.85rem;}
+  .meta-row .dot{margin:0 8px;opacity:.5;}
+
+  main{max-width:760px;margin:0 auto;padding:0 24px 40px;}
+  .lede{font-size:1.2rem;color:#dcdce4;padding-top:12px;}
+
+  .jump-nav{
+    display:flex;flex-wrap:wrap;gap:10px;margin:32px 0 44px;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;
+  }
+  .jump-nav a{
+    color:var(--ice);text-decoration:none;font-size:.82rem;font-family:'JetBrains Mono',monospace;
+    border:1px solid var(--steel);padding:6px 12px;border-radius:20px;transition:all .2s;
+  }
+  .jump-nav a:hover{background:var(--ice);color:var(--obsidian);border-color:var(--ice);}
+
+  section.chapter{padding-top:60px;scroll-margin-top:80px;}
+  .temp-label{
+    font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.18em;
+    padding:4px 10px;border-radius:4px;display:inline-block;margin-bottom:14px;font-weight:700;
+  }
+  .temp-hot{background:rgba(255,90,46,.15);color:var(--amber);border:1px solid rgba(255,90,46,.4);}
+  .temp-cold{background:rgba(111,214,232,.12);color:var(--ice);border:1px solid rgba(111,214,232,.4);}
+  .temp-mix{background:linear-gradient(90deg,rgba(111,214,232,.15),rgba(255,90,46,.15));color:var(--frost);border:1px solid var(--line);}
+
+  h2{font-size:1.7rem;color:var(--frost);margin-bottom:16px;}
+  h3{font-size:1.2rem;color:var(--amber);margin:28px 0 10px;}
+  p{color:#d4d4de;margin:0 0 18px;}
+  .pull{
+    font-family:'Fraunces',serif;font-style:italic;font-size:1.3rem;color:var(--frost);
+    border-left:3px solid var(--ember);padding:4px 0 4px 20px;margin:28px 0;
+  }
+  .divider{
+    height:1px;width:100%;margin:56px 0;
+    background:linear-gradient(90deg,var(--ice),transparent 45%,transparent 55%,var(--ember));
+  }
+
+  .study-card{
+    background:var(--char);border:1px solid var(--line);border-radius:10px;
+    padding:20px 22px;margin:20px 0;
+  }
+  .study-card .who{color:var(--ice);font-family:'JetBrains Mono',monospace;font-size:.78rem;margin-bottom:6px;}
+
+  .faq-item summary{cursor:pointer;color:var(--frost);font-weight:600;padding:14px 0;border-bottom:1px solid var(--line);}
+  .faq-item p{padding-top:10px;}
+
+  #sources{padding-top:60px;}
+  .sources-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:8px 40px;
+    font-size:.88rem;color:#a9a9b6;
+  }
+  .sources-grid div{padding:8px 0;border-bottom:1px solid var(--line);}
+  @media (max-width:640px){.sources-grid{grid-template-columns:1fr;}}
+
+  .share-bar{display:flex;gap:14px;align-items:center;margin:40px 0;padding:20px 0;border-top:1px solid var(--line);}
+  .share-bar span{color:#8b8b98;font-size:.85rem;font-family:'JetBrains Mono',monospace;}
+  .share-bar a{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--char);border:1px solid var(--line);transition:.2s;}
+  .share-bar a:hover{border-color:var(--ember);}
+  .share-bar svg{width:18px;height:18px;fill:var(--frost);}
+
+  footer{border-top:1px solid var(--line);margin-top:20px;padding:36px 24px;text-align:center;color:#7a7a86;font-size:.85rem;}
+  footer a{color:var(--ice);}
+
+  #cookie-banner{
+    position:fixed;bottom:0;left:0;right:0;z-index:1000;
+    background:var(--char);border-top:1px solid var(--line);
+    padding:16px 20px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:center;
+  }
+  #cookie-banner p{margin:0;color:#c9c9d6;font-size:.85rem;font-family:sans-serif;}
+  #cookie-banner button{
+    background:var(--ember);color:var(--obsidian);border:none;padding:9px 22px;
+    border-radius:6px;font-weight:700;cursor:pointer;font-family:sans-serif;
+  }
+</style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<nav class="top-nav">
+  <span class="nav-brand">Fire<span>&amp;</span>Ice</span>
+</nav>
+
+<div class="hero-wrap">
+  <img src="hero.png" alt="Ice cubes and open flame reflected on a dark wet surface, illustrating the collision of hot and cold states" width="1600" height="900">
+</div>
+
+<div class="title-block">
+  <div class="eyebrow">Psychology &middot; Behavioral Economics</div>
+  <h1>Fire and Ice: The Psychology of the Hot-Cold Divide</h1>
+  <p class="subtitle">Why the comfortable cannot feel the crisis of the cold — and why the cold cannot perform for the comfort of the warm.</p>
+  <p class="meta-row">A research article <span class="dot">&middot;</span> ~52 min read</p>
+</div>
+
+<main>
+  <p class="lede">Two states of the human body rarely understand each other. One is warm, fed, socially buoyant, and has room to spare for nuance, celebration, and small talk. The other is cold, depleted, and narrowed entirely around the next five minutes of survival. When these two states try to communicate — over a phone, across a table, in the space of a single text message — something close to a translation failure occurs. Neither side is lying. Neither side is stupid. They are simply running on incompatible operating systems, and the gap between them explains a surprising amount of ordinary human cruelty.</p>
+
+  <nav class="jump-nav" aria-label="Article sections">
+    <a href="#gap">The Empathy Gap</a>
+    <a href="#reward">Why It Feels So Good First</a>
+    <a href="#darvo">Accountability and DARVO</a>
+    <a href="#contempt">Contempt</a>
+    <a href="#mask">The Divided Self</a>
+    <a href="#narc">The Grandiose Architecture</a>
+    <a href="#fantasy">The Shared Fantasy</a>
+    <a href="#parts">Parts, Not Monoliths</a>
+    <a href="#library">A Library of Doubles</a>
+    <a href="#myth">Older Than Psychology</a>
+    <a href="#chariot">The Philosophers' Chariot</a>
+    <a href="#recalibration">Recalibration</a>
+    <a href="#authenticity">The Authenticity Trap</a>
+    <a href="#boundary">Breaking the Cycle</a>
+    <a href="#open">Open Questions</a>
+    <a href="#sources">Sources</a>
+  </nav>
+
+  <section class="chapter" id="gap">
+    <span class="temp-label temp-cold">COLD STATE</span>
+    <h2>The Hot-Cold Empathy Gap</h2>
+    <p>In 1996, behavioral economist George Loewenstein published a paper arguing that human decision-making is not governed primarily by reason, but is regularly overridden by <em>visceral factors</em> — hunger, pain, fear, exhaustion, cold. A decade later he and his collaborators formalized what they called the <strong>hot-cold empathy gap</strong>: a systematic failure of people in a calm, comfortable ("cold") state to accurately imagine how a visceral, threatened ("hot") state governs someone else's behavior.</p>
+    <p>The gap runs in both directions. In the <em>cold-to-hot</em> direction, a person who is warm, fed, and safe consistently underestimates how completely a visceral drive will dominate someone else's choices, mood, and conversational bandwidth. In the <em>hot-to-cold</em> direction, a person gripped by acute distress struggles to believe that calm will ever return, which is part of why crises feel catastrophic and permanent from the inside.</p>
+    <div class="study-card">
+      <div class="who">VAN BOVEN &amp; LOEWENSTEIN, 2003 — Personality and Social Psychology Bulletin</div>
+      <p style="margin:0;">Comfortable, well-hydrated participants were asked to evaluate the distress of hikers stranded in cold, dehydrating conditions. The comfortable observers consistently underestimated the panic and cognitive degradation the hikers actually reported — evaluating the stranded through the lens of their own homeostatic ease.</p>
+    </div>
+    <p>A simple thought experiment makes the mechanism concrete. Picture someone stranded after a car breakdown on a rural road at night, temperatures dropping toward freezing, phone battery failing. Now picture a friend of theirs at a warm restaurant, mid-celebration with people they haven't seen in months. The stranded person reaches out, plainly distressed. The friend, mid-toast, reads the message as an interruption and responds with irritation, essentially asking to have their good mood reflected back rather than absorbing the bad news.</p>
+    <p>Neither person is villainous. The friend at the restaurant is not being cruel by design — they are evaluating the message against their own baseline of warmth and company, and a flat, distressed reply reads to them as a mood problem rather than a survival problem. The stranded person is not being needy — their prefrontal cortex has handed nearly all its resources over to threat management, leaving nothing for diplomacy or cheer. This is the empathy gap in its purest form: two nervous systems, two temperatures, one conversation.</p>
+    <h3>Why the brain can't bridge it on its own</h3>
+    <p>The gap persists because of <strong>egocentric anchoring</strong> — the brain evaluates other people's internal states using its own current state as the reference point. A person sitting in a heated room has no easy way to simulate what sub-freezing exposure does to working memory, mood, or patience, so they default to assuming the other person's situation is basically fine and their behavior is a choice. Nordgren, van der Pligt, and van Harreveld (2006) showed this directly: observers in a comfortable state judged people under visceral strain as having weaker character or self-control, simply because the observer's evaluation never factored in the physiological force acting on the other person.</p>
+  </section>
+
+  <section class="chapter" id="reward">
+    <span class="temp-label temp-hot">HOT STATE</span>
+    <h2>Why It Feels So Good, At First</h2>
+    <p>If hot-and-cold dynamics were only painful, no one would stay in them. The uncomfortable truth is that unpredictability is neurologically more compelling than stability — at least in the short term.</p>
+    <p>Schultz, Dayan, and Montague's landmark 1997 work on <strong>reward prediction error</strong> found that dopamine neurons don't fire in proportion to how good a reward is; they fire in proportion to how <em>unexpected</em> it is. A fully predictable reward produces almost no dopamine surge at all. An unpredictable one — warmth that shows up only sometimes, approval that has to be won back after a cold spell — produces a much larger spike. This is the same mechanism that makes slot machines more compelling than vending machines.</p>
+    <div class="pull">Relief from tension activates the same reward circuitry — the nucleus accumbens and ventromedial prefrontal cortex — as a primary reward. The end of anxiety can feel indistinguishable from intimacy.</div>
+    <p>Leknes and colleagues (2011, <em>PNAS</em>) demonstrated that the cessation of an aversive state is itself processed as rewarding. This has a specific consequence for volatile relationships: the sharp swing from tension back to warmth doesn't just feel like relief — it gets misfiled by the nervous system as closeness. Add Dutton and Painter's classic research on <strong>traumatic bonding</strong> (1981), which found that the two variables most predictive of an unusually strong emotional attachment are an imbalance of power and an intermittent schedule of reinforcement, and the pattern becomes clear: instability is not a bug in these dynamics. It is the engine.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="chapter" id="darvo">
+    <span class="temp-label temp-mix">FRICTION POINT</span>
+    <h2>When Accountability Meets a Fragile Ego</h2>
+    <p>What happens when the cold-state person in one of these exchanges is asked to account for their own lack of empathy? Psychologist Jennifer Freyd's research identifies a common defensive sequence: <strong>DARVO</strong> — Deny, Attack, and Reverse Victim and Offender.</p>
+    <ul style="color:#d4d4de;">
+      <li style="margin-bottom:10px;"><strong>Deny</strong> — the substance of the complaint is ignored or minimized rather than engaged with.</li>
+      <li style="margin-bottom:10px;"><strong>Attack</strong> — the focus shifts rapidly from the original behavior to the accuser's tone, timing, or character.</li>
+      <li style="margin-bottom:10px;"><strong>Reverse Victim and Offender</strong> — by the end of the exchange, the person who was asked for accountability has recast themselves as the one who was wronged.</li>
+    </ul>
+    <p>DARVO is best understood not as a conscious con but as an outcome of <strong>moral disengagement</strong>, a framework developed by psychologist Albert Bandura. Bandura identified specific cognitive mechanisms people use to commit or excuse harmful behavior without damaging their self-image — chiefly <em>attribution of blame</em> (recasting the other person as the cause of one's own bad behavior) and <em>devaluation</em> (framing the other person as fundamentally difficult, dramatic, or unreasonable, which removes the obligation to treat them with care).</p>
+    <div class="study-card">
+      <div class="who">PATTERN, NOT SCRIPT — A Composite Illustration</div>
+      <p style="margin:0;">Picture a disagreement over a missed phone call. Stage one is <em>denial</em>: the substance of the complaint goes unaddressed, quietly relabeled as an overreaction to a minor mix-up. Stage two is <em>attack</em>: the conversation's subject shifts from the original behavior to how it was raised — its timing, its tone, its inconvenience. Stage three is <em>reversal</em>: by the end, the person who raised the concern is the one being asked to apologize, because their reaction, rather than the behavior that prompted it, has become the thing under discussion. Each stage is individually plausible. It is the sequence, repeated across enough disagreements, that reveals the structure.</p>
+    </div>
+    <h3>The escalation ladder</h3>
+    <p>When a single defensive move fails to end an accountability conversation, researchers on high-conflict communication describe a fairly predictable ladder of fallback tactics, each attempted in turn until one works:</p>
+    <ul style="color:#d4d4de;">
+      <li style="margin-bottom:10px;"><strong>Trivialization</strong> — a sudden shift to casual, unrelated small talk, implicitly signaling that the prior conflict wasn't serious enough to warrant a response.</li>
+      <li style="margin-bottom:10px;"><strong>Euphemism</strong> — Bandura's term for relabeling: a sharp, deliberate comment becomes a "miscommunication," which is a milder category requiring no repair.</li>
+      <li style="margin-bottom:10px;"><strong>The victim pivot</strong> — introducing the speaker's own unrelated hardship mid-conversation, which redirects the listener's caretaking instinct away from the original complaint.</li>
+      <li style="margin-bottom:10px;"><strong>Conditional concession</strong> — an apology structurally cancelled by its own justification ("I shouldn't have said that, but you weren't giving me anything to work with"), sometimes called a "yes, but" negation in behavioral therapy literature.</li>
+      <li style="margin-bottom:10px;"><strong>Physiological override</strong> — a sudden shift toward flattery, sexual attention, or intense affection, which functions to flood the listener's reward system and interrupt the cognitive dissonance of an unresolved conflict, rather than to resolve it.</li>
+    </ul>
+    <p>Seen individually, none of these look alarming — people trivialize, misspeak, and get defensive for all kinds of ordinary reasons. What marks the pattern as structural rather than incidental is <em>velocity</em>: several of these moves firing in sequence, within minutes, each abandoned the moment it fails to produce compliance. Gregory Bateson's concept of the <strong>double bind</strong> is relevant here too — when a person is simultaneously asked to be more affectionate and penalized for whatever affection they offer, compliance becomes structurally impossible, which is often the point.</p>
+    <p>Underneath both is a structural feature of personality that psychoanalyst Otto Kernberg called <strong>splitting</strong> — the inability to hold a mixed, ambivalent view of oneself in a single moment ("I care about this person, and I also just behaved badly"). A psyche organized around splitting cannot tolerate that sentence. It resolves the discomfort by keeping an idealized self-image walled off from any evidence of fault, and the wall is maintained, moment to moment, by exactly the defenses Freyd and Bandura describe.</p>
+  </section>
+
+  <section class="chapter" id="contempt">
+    <span class="temp-label temp-mix">FRICTION POINT</span>
+    <h2>Contempt: The Line Criticism Doesn't Cross</h2>
+    <p>Psychologist John Gottman spent decades observing couples in conflict and found one behavior that predicted relational breakdown more reliably than any other: <strong>contempt</strong>. Gottman draws a sharp distinction between criticism, which targets a specific action, and contempt, which targets a person's fundamental worth — a global verdict on someone's character rather than an objection to a single behavior. Criticism can be repaired. Contempt is corrosive because it doesn't ask for a behavior to change — it asserts that the other person's character is the problem, which leaves nothing concrete to fix.</p>
+    <p>Neurologically, this lands harder than it might sound. Eisenberger, Lieberman, and Williams (2003) found that social rejection and identity-level condemnation activate the dorsal anterior cingulate cortex and anterior insula — the same regions that register physical pain. A character attack is not "just words" to the nervous system; it is processed, in part, as an injury.</p>
+    <p>Contempt also tends to arrive precisely when it is least fair: research on <strong>circadian depletion</strong> and prefrontal fatigue shows that executive control — the capacity to stay measured, curious, and fair in a disagreement — degrades sharply late at night and under exhaustion. A study of parole board rulings (Danziger, Levav, and Feld-Peshkov, 2011) found that favorable decisions dropped close to zero right before a scheduled break and rebounded immediately after judges ate. Depletion doesn't just make people tired. It makes them harsher.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="chapter" id="mask">
+    <span class="temp-label temp-cold">COLD STATE</span>
+    <h2>The Divided Self: Masks, Splits, and the Fear of Being Seen</h2>
+    <p>Long before clinical psychology had a vocabulary for any of this, literature and myth were already mapping the same terrain: the gap between the self a person is allowed to show and the self that actually exists underneath.</p>
+    <p>Sigmund Freud described <strong>splitting of the ego</strong> as a defense in which a person holds two contradictory realities without letting them touch, so that a polished, functional identity can operate in public while a harsher reality is kept fully walled off. Sociologist Erving Goffman found the same architecture in everyday social life, describing a permanent divide between the <strong>front stage</strong>, where a performance of normalcy is maintained, and the <strong>back stage</strong>, where the mask comes off. D. W. Winnicott called the performing half the <strong>False Self</strong> — a compliant, competent persona built to protect a more vulnerable True Self from an environment that couldn't hold it safely.</p>
+    <div class="study-card">
+      <div class="who">LITERARY PARALLEL — The Masked Face</div>
+      <p style="margin:0;">Gothic and mythic literature returns to this structure constantly because it dramatizes something true: <em>Phantom of the Opera</em>'s literal mask, Dr. Jekyll's chemical partition, Dorian Gray's portrait absorbing the cost of a spotless public face. In every version, the mask isn't deceit for its own sake — it's the price of admission to a world that only wants the polished half.</p>
+    </div>
+    <p>Psychologist R. D. Laing described the specific dread underneath this architecture as <strong>petrification</strong> — the fear of being reduced from a feeling subject to an object, a function, a role. The ancient figure of Medusa maps onto this almost exactly: a violation followed by transformation into a defense so total that no one can get close enough to cause harm again, and a world that responds to the transformation not with understanding but with the label "monster." The armor isn't the tragedy. The tragedy is a world that only ever wanted the mask, and punished the person the moment it slipped.</p>
+    <h3>When compartmentalization runs both directions</h3>
+    <p>Splitting doesn't only protect a vulnerable self from a hostile world — it can also be the architecture behind maintaining two incompatible commitments at once. Structural dissociation theory, developed by trauma researchers Onno van der Hart, Ellert Nijenhuis, and Kathy Steele, describes an <strong>Apparently Normal Part</strong> that manages daily obligations and presentation, walled off from other, unintegrated aspects of a person's life. A person running two parallel relationships without either partner's knowledge, for instance, isn't necessarily a calculating strategist — the compartment wall itself can be doing most of the work, allowing each relationship to feel emotionally coherent from the inside while the contradiction between them never has to be consciously held. This matters for the hot-cold pattern specifically: a securely compartmentalized second relationship is structurally low-stakes by design — no shared logistics, no accountability to a shared circle — which is exactly the condition under which intermittent warmth is cheapest to supply and hardest to hold anyone accountable for withdrawing.</p>
+  </section>
+
+  <section class="chapter" id="narc">
+    <span class="temp-label temp-hot">HOT STATE</span>
+    <h2>The Grandiose Architecture</h2>
+    <p>Splitting isn't distributed evenly across personality types. In some structures it becomes the primary organizing defense, and the clinical literature on pathological narcissism describes this in unusually precise terms. Otto Kernberg proposed that narcissism is built around a <strong>Grandiose Self</strong> — an inflated, idealized self-concept — held rigidly apart from a <strong>devalued core</strong> of shame, emptiness, and perceived defectiveness. The grandiosity isn't confidence; it's a fortress built specifically to keep that second part from reaching consciousness.</p>
+    <p>Heinz Kohut refined this further, distinguishing a <strong>horizontal split</strong> (ordinary repression, where vulnerability is pushed below awareness) from a <strong>vertical split</strong> — two contradictory conscious states running side by side without ever communicating. In the vertical split, entitlement and grandiosity operate on one side while acute insecurity runs on the other, and the person moves between them without apparent friction, because the two halves were never wired to notice each other.</p>
+    <h3>Mortification and rage</h3>
+    <p>When an external boundary or failure manages to pierce the grandiose side, the result is what Kohut called <strong>narcissistic mortification</strong> — a flood of shame experienced as something closer to annihilation than embarrassment. The rage that often follows isn't really about the triggering event; it's an emergency defense recruited to force the split back into place before the devalued core becomes fully conscious.</p>
+    <div class="study-card">
+      <div class="who">CLINICAL TREATMENT — Transference-Focused Psychotherapy</div>
+      <p style="margin:0;">Kernberg's treatment model, TFP, doesn't try to talk a patient out of splitting directly. It uses the live therapeutic relationship itself: as idealization and devaluation of the therapist play out in real time, the clinician names the contradiction plainly — "a moment ago I was the only one who understood you; now I've apparently never cared" — and asks the patient to hold both descriptions at once. Healing, in this model, is measured by how much ambivalence a person can tolerate without the picture collapsing into all-good or all-bad.</p>
+    </div>
+    <p>It's worth separating the clinical picture from the popular one. Genuine Narcissistic Personality Disorder requires a comprehensive assessment across many life domains — it isn't diagnosed from a single argument. But the underlying mechanism, splitting under threat to a fragile self-image, exists on a spectrum, and milder versions of it show up in a great deal of ordinary conflict.</p>
+  </section>
+
+  <section class="chapter" id="fantasy">
+    <span class="temp-label temp-mix">FRICTION POINT</span>
+    <h2>The Shared Fantasy</h2>
+    <p>Grandiose defenses rarely operate alone — they require an audience. Clinicians describe a <strong>shared fantasy</strong>: a co-created bubble in which two people tacitly agree to suspend ordinary reality in exchange for feeling exceptional together. One partner's admiration sustains the other's grandiosity, and the arrangement holds only as long as neither party introduces anything as mundane as fatigue, disagreement, or a bad day.</p>
+    <p>The dynamic runs somewhat differently depending on who is in it. In an <strong>asymmetrical</strong> pairing — one narcissistic partner, one more empathic or accommodating partner — the roles complement each other: one supplies grandeur, the other supplies unconditional caretaking, each believing the arrangement will eventually be reciprocated. In a <strong>symmetrical</strong> pairing, both partners are narcissistic, and the fantasy runs as a merger of two brands rather than a caretaking arrangement — each treating the other as a high-status mirror, bonded partly through shared contempt for outsiders.</p>
+    <h3>Do narcissists actually pair with narcissists?</h3>
+    <p>Somewhat, yes — and it's measurable. Personality research documents <strong>positive assortative mating</strong> for Dark Triad traits: partner-to-partner correlations for narcissism (roughly r = 0.18–0.28 across several studies) run notably higher than for most general personality traits. W. Keith Campbell's <strong>Contextual Model</strong> explains why the pattern doesn't last: narcissistic traits — confidence, charisma, social boldness — are genuine assets in an <em>emerging</em> relationship, where the demands are agentic (be exciting, be impressive). But long-term relationships shift the required currency toward <em>communal</em> traits — patience, empathy, unglamorous caretaking — which is precisely where the structure runs out of tools. Campbell describes the early stage as "eating chocolate cake": intensely gratifying in the moment, structurally unsuited to being a steady diet.</p>
+    <div class="study-card">
+      <div class="who">PAULHUS, 1998 — Longitudinal Peer Ratings</div>
+      <p style="margin:0;">Delroy Paulhus tracked how peer groups rated individuals with narcissistic traits over seven weeks. In week one, ratings were high across confidence, competence, and likability. By week seven, the same individuals were rated as arrogant and interpersonally cold — the identical traits, reinterpreted once enough contact accumulated to see past the performance.</p>
+    </div>
+  </section>
+
+  <section class="chapter" id="parts">
+    <span class="temp-label temp-cold">COLD STATE</span>
+    <h2>Parts, Not Monoliths</h2>
+    <p>Not every model of the divided self treats splitting as pathology to be eliminated. Several frameworks instead treat the mind as naturally plural, made up of distinct sub-systems that only become destructive under sustained stress.</p>
+    <p>W. R. D. Fairbairn's <strong>endopsychic structure</strong> proposed that early relational rejection fractures the ego into three linked systems: a <strong>Central Ego</strong> that manages daily functioning and stays emotionally flat to avoid friction; a <strong>Libidinal Ego</strong> that carries the exiled longing for genuine connection; and an <strong>Antilibidinal Ego</strong>, an internal enforcer that actively attacks the Libidinal Ego's neediness to keep the functional mask intact. The person doesn't experience three separate people — they experience one flat, capable exterior with an internal warden making sure nothing vulnerable ever surfaces.</p>
+    <p>Richard Schwartz's <strong>Internal Family Systems (IFS)</strong> model modernizes this with a different premise: multiplicity is the mind's natural state, not a defect. <strong>Managers</strong> run daily life and keep things presentable; <strong>Firefighters</strong> intervene reactively when a wound is suddenly exposed; <strong>Exiles</strong> carry the original pain, kept out of view by the other two. Unlike Fairbairn, IFS assumes an undamaged core — the <strong>Self</strong> — capable of leading the system with curiosity and compassion once the protective parts are convinced it's safe to stand down.</p>
+    <p>D. W. Winnicott's <strong>False Self</strong> sits between these models: a compliant, capable persona built specifically because an early environment couldn't safely hold the person's authentic reactions. The False Self isn't a lie — it's a bodyguard. The risk, across all three frameworks, is the same: the protective structure works so well that the person mistakes it for the whole of who they are, and the parts it was built to guard go permanently unheard.</p>
+  </section>
+
+  <section class="chapter" id="library">
+    <span class="temp-label temp-mix">FRICTION POINT</span>
+    <h2>A Library of Doubles</h2>
+    <p>Long before psychoanalysis had a vocabulary for any of this, fiction was already running the same experiment. A striking cluster of stories from the 19th century — and their modern descendants — dramatize exactly this fracture between a socially acceptable exterior and an exiled, unmanageable interior.</p>
+    <div class="study-card">
+      <div class="who">ROBERT LOUIS STEVENSON, 1886</div>
+      <p style="margin:0;"><strong>Dr. Jekyll and Mr. Hyde</strong> — a chemical partition rather than a psychological one, but the logic is identical: a respectable public persona and a disowned, unsupervised shadow, each believing the other can be kept contained indefinitely. Because Hyde is given no legitimate outlet, he grows stronger with every suppression, until he begins to surface without the potion at all.</p>
+    </div>
+    <div class="study-card">
+      <div class="who">MARY SHELLEY, 1818</div>
+      <p style="margin:0;"><strong>Frankenstein</strong> — the creature is not born monstrous; he is made monstrous by conditional acceptance. Every instance of genuine, unmasked contact is met with horror, and the resulting hostility is explicitly framed as learned: "I was benevolent and good; misery made me a fiend." It is one of literature's clearest studies of what happens when authentic exposure is repeatedly punished rather than met.</p>
+    </div>
+    <div class="study-card">
+      <div class="who">OSCAR WILDE, 1890</div>
+      <p style="margin:0;"><strong>The Picture of Dorian Gray</strong> — the split runs through an object rather than a second self: a flawless public face, with every consequence of cruelty and moral decay siphoned off onto a hidden portrait. The arrangement works only as long as the portrait stays hidden, and destroying it to escape the guilt destroys the person it was protecting.</p>
+    </div>
+    <div class="study-card">
+      <div class="who">VICTOR HUGO, 1831</div>
+      <p style="margin:0;"><strong>The Hunchback of Notre-Dame</strong> — an inversion worth noting: Quasimodo, visibly rejected by society, remains psychologically whole, while Archdeacon Frollo, outwardly pious and disciplined, harbors a repressed obsession that eventually consumes him entirely. The story's real subject isn't the visible outcast — it's the hidden fracture behind a respected face.</p>
+    </div>
+    <div class="study-card">
+      <div class="who">BROTHERS GRIMM</div>
+      <p style="margin:0;"><strong>Beauty and the Beast</strong> — one of the few versions of this archetype that resolves through integration rather than collapse. The transformation only completes once the Beast is accepted <em>as</em> the Beast, unpolished; the fairytale's implicit claim is that healing requires being met in the unmasked state, not coaxed back into the mask.</p>
+    </div>
+    <p>The pattern didn't stop updating itself. Modern fiction runs the identical architecture through new materials — a corporate everyman and the anarchic alter-ego he can't consciously acknowledge in <em>Fight Club</em>; a mild-mannered teacher and the persona he builds specifically to feel powerful in <em>Breaking Bad</em>; a billionaire's carefree public performance built entirely to protect a much darker private mission in the Batman mythos. The costumes change; the underlying claim — that the socially rewarded self and the actual self are rarely the same self — doesn't.</p>
+  </section>
+
+  <section class="chapter" id="myth">
+    <span class="temp-label temp-cold">COLD STATE</span>
+    <h2>Older Than Psychology</h2>
+    <p>The divided self is not a modern discovery. It shows up in the oldest surviving stories humans wrote down, long before Freud or Kernberg had names for any of it.</p>
+    <h3>Gilgamesh and Enkidu</h3>
+    <p>In the oldest recorded epic (Mesopotamia, c. 2100 BCE), King Gilgamesh — hyper-controlled, tyrannical, walled inside his own city — is balanced by Enkidu, a wild counterpart made of raw instinct and animal vitality. The two don't reconcile through domination; they wrestle to a standstill and embrace. Integration, in the oldest version of this story, looks like a draw, not a conquest.</p>
+    <h3>The two birds on one branch</h3>
+    <p>The Mundaka Upanishad (Vedic India, c. 800 BCE) describes two identical birds sharing a single branch: one hops frantically between sweet and bitter fruit, swinging through pleasure and disappointment; the other simply watches, untouched. Suffering ends not when the restless bird is destroyed, but when it notices the still one it has been anchored to the whole time.</p>
+    <h3>Medusa, revisited</h3>
+    <p>Medusa's myth was introduced earlier as a study in petrification; it carries further layers worth naming. Athena's blood ran in two vials — lethal from one side, capable of resurrection from the other, a fairly exact allegory for how the same defensive intensity forged by violation can either isolate a person indefinitely or, redirected, become genuine discernment. And from her severed neck sprang Pegasus — the winged horse, creative and free — a reminder that whatever vitality gets locked beneath a defensive shell doesn't disappear. It waits.</p>
+    <h3>Biblical parallels</h3>
+    <p>Scripture returns to the same structure repeatedly. Jacob wrestles an unnamed adversary through the night at the Jabbok river and only receives a blessing once he stops deflecting and states his actual name — a fairly literal dramatization of integration requiring the mask to come off first. Paul's letter to the Romans (7:15) offers what may be antiquity's clearest first-person account of a divided will: <em>"What I want to do I do not do, but what I hate I do."</em> The Gerasene demoniac, introduced as "Legion, for we are many," is described afterward — once the fragmentation resolves — as sitting calmly, "clothed and in his right mind": psychological integration, rendered as literal peace.</p>
+  </section>
+
+  <section class="chapter" id="chariot">
+    <span class="temp-label temp-mix">FRICTION POINT</span>
+    <h2>The Philosophers' Chariot</h2>
+    <p>Philosophy arrived at the same structural insight from an entirely different direction: not clinical observation, but introspection about how the will actually behaves.</p>
+    <p>Plato's <em>Phaedrus</em> (c. 370 BCE) pictures the soul as a charioteer managing two winged horses — one noble and self-disciplined, one unruly and appetite-driven — with reason holding the reins but no independent motive force of its own. Roughly 2,300 years later, psychologist Jonathan Haidt updated the image for cognitive science as the <strong>Elephant and the Rider</strong>: reason isn't really the driver at all, but closer to a press secretary, generating plausible justifications for decisions the faster, more powerful "elephant" of intuition and emotion has already made.</p>
+    <p>Arthur Schopenhauer described intellect as <em>"a lame man who can see, carried on the shoulders of a blind giant who cannot"</em> — the giant being the blind, irrational Will underneath all behavior. Freud later credited Schopenhauer directly, translating that Will into the biological Id and building the Ego's task — mediating between instinct and reality — almost exactly on Schopenhauer's template.</p>
+    <p>Nietzsche's account of the psyche as a "parliament of drives" rather than a single unified self fed two very different disciples. Alfred Adler converted Nietzsche's <em>will to power</em> into clinical terms, arguing that felt inferiority drives compensatory striving — and, when that compensation curdles into domination over others, into what Adler considered the actual root of neurosis. Carl Jung took a different thread from Nietzsche — the <strong>Shadow</strong>, the disowned material a conscious persona refuses to claim — and turned it into the foundation of Jungian shadow work, distinguishing a personal shadow (individually acquired, and integrable through ordinary self-honesty) from a collective shadow (archetypal, transpersonal, and dangerous to identify with directly).</p>
+  </section>
+
+  <section class="chapter" id="recalibration">
+    <span class="temp-label temp-hot">HOT STATE</span>
+    <h2>Recalibration</h2>
+    <p>Disengaging from a volatile, intermittently reinforced dynamic has a physiological timeline, not just an emotional one. The nervous system's recovery broadly tracks the biology of withdrawal from any unpredictable reward source.</p>
+    <ul style="color:#d4d4de;">
+      <li style="margin-bottom:10px;"><strong>Days 1–14:</strong> Dopamine in the reward pathway sits below baseline once the intermittent supply stops, producing low mood and intrusive urges to check for contact, while cortisol remains elevated, disrupting sleep.</li>
+      <li style="margin-bottom:10px;"><strong>Weeks 2–6:</strong> Dopamine receptors gradually regain sensitivity to ordinary, lower-intensity experiences, while the adrenal system, no longer running in constant emergency mode, often produces a temporary crash of low energy and heaviness.</li>
+      <li style="margin-bottom:10px;"><strong>Months 2–3:</strong> Cortisol resettles into a normal daily rhythm, sleep architecture recovers, and connectivity between the prefrontal cortex and amygdala improves — the biological basis for feeling less reactive to reminders.</li>
+      <li style="margin-bottom:10px;"><strong>Months 3–6+:</strong> With sustained non-contact, conditioned trigger responses (a notification sound, a particular place) weaken through ordinary extinction learning, and baseline dopamine stabilizes around calmer, steadier sources of reward.</li>
+    </ul>
+    <p>The single variable that resets this clock every time is renewed contact — even brief, even hostile. A nervous system recovering from an intermittent-reward pattern responds to any contact as a fresh variable-ratio hit, which is the physiological reason "just one more conversation" so reliably restarts the whole cycle from day one.</p>
+  </section>
+
+  <section class="chapter" id="authenticity">
+    <span class="temp-label temp-cold">COLD STATE</span>
+    <h2>The Authenticity Trap</h2>
+    <p>There is a specific cruelty in being told to "just be yourself" by an environment that only ever wanted the curated version. Several frameworks name this precisely.</p>
+    <p>Carl Rogers described <strong>conditions of positive regard</strong> — acceptance that appears unconditional but is quietly attached to strict, unstated terms, revoked the moment a person's genuine self departs from the preferred script. Philosopher Martin Buber's distinction between <strong>I-Thou</strong> and <strong>I-It</strong> relationships captures what happens next: in an I-It relationship, a person is related to as a function — the reliably cheerful one, the low-maintenance one — rather than as a sovereign subject. The moment that function breaks down, so does the relationship, because it was never built to hold anything else.</p>
+    <p>Sociologist Erving Goffman's front-stage/back-stage model, introduced earlier, explains why this backlash feels so specifically disorienting: most environments implicitly request a front-stage performance even while claiming to want back-stage honesty. R. D. Laing's <strong>petrification</strong> describes the resulting defense — a preemptive numbing, freezing one's own responses before anyone else can, on the logic that an already-still surface can't be hurt by rejection.</p>
+    <div class="pull">Real intimacy is not something owed by a crowd. It is something a small number of people, over time, prove they have the bandwidth to hold.</div>
+    <p>None of this means unmasking is always safe, or that every environment deserves full disclosure. It means the sting of being loved only for a performance is not evidence of being fundamentally unlovable — it's evidence of a transaction, correctly identified as a transaction, ending exactly the way transactions end when the terms of supply change.</p>
+  </section>
+
+  <section class="chapter" id="boundary">
+    <span class="temp-label temp-hot">HOT STATE</span>
+    <h2>Breaking the Cycle</h2>
+    <p>If intermittent reinforcement is what keeps a hot-cold dynamic running, the behavioral-science answer to it is unglamorous but well established: <strong>extinction</strong>. In operant conditioning, a reinforced behavior that suddenly receives no response doesn't fade quietly — it spikes first. B. F. Skinner and later researchers documented the <strong>extinction burst</strong>: a temporary, often dramatic escalation in the unreinforced behavior before it declines. Understanding this in advance changes how it lands. An escalation after a boundary is not evidence the boundary was wrong. It is the predictable shape of a reinforcement schedule running out of runway.</p>
+    <div class="study-card">
+      <div class="who">PATTERN, NOT SCRIPT — The Burst Sequence</div>
+      <p style="margin:0;">A generic but common shape: a boundary is stated once, plainly. The reply escalates — first minimizing, then a threat to end the connection altogether, then open hostility, then, when none of that restores contact, a sudden reversal into warmth or flattery. If the boundary still holds, the sequence often loops back to hostility, sometimes invoking unrelated past generosity as leverage — a reminder of everything previously given, offered as though it were owed something in return. Read as isolated messages, the whiplash looks irrational. Read as an extinction burst, it's a reinforcement schedule running out of options in a fairly fixed order — which is also why it tends to stop once no stage in the sequence gets a response.</p>
+    </div>
+    <p>Practically, this points toward a small number of well-supported principles:</p>
+    <ul style="color:#d4d4de;">
+      <li style="margin-bottom:10px;"><strong>Name the pattern, not the person.</strong> Describing a dynamic in structural terms — pointing at the mechanism rather than the character — is harder to argue with than a character judgment, and avoids supplying new material for a DARVO response.</li>
+      <li style="margin-bottom:10px;"><strong>Expect the burst, don't reward it.</strong> A spike in contact, guilt, or urgency after a boundary is data confirming the pattern, not a signal to reverse it.</li>
+      <li style="margin-bottom:10px;"><strong>Let the nervous system recover on its own timeline.</strong> Research on cortisol and catecholamine clearance suggests the acute physiological charge of a difficult exchange resolves within roughly a day; repeated re-engagement resets that clock each time.</li>
+    </ul>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="chapter" id="open">
+    <h2>Open Questions</h2>
+    <p>This framework is useful, but it is not a complete account of human conflict, and a few tensions are worth naming honestly:</p>
+    <ul style="color:#d4d4de;">
+      <li style="margin-bottom:10px;">The empathy gap explains a failure of imagination, not a moral defect — but at what point does <em>repeated</em> failure to imagine another person's state stop being an innocent cognitive limit and become a choice not to look?</li>
+      <li style="margin-bottom:10px;">Splitting and DARVO are described here as automatic, largely unconscious processes. How much responsibility does an unconscious pattern carry, compared to a deliberate one — and does the distinction matter to the person on the receiving end?</li>
+      <li style="margin-bottom:10px;">Extinction-burst theory comes from behaviorism, a field built largely on non-human subjects. How well does a model designed for lever-pressing pigeons actually map onto full human relationships, with their layered history and meaning?</li>
+    </ul>
+  </section>
+
+  <details class="faq-item">
+    <summary>What is the hot-cold empathy gap?</summary>
+    <p>A cognitive bias, formalized by behavioral economist George Loewenstein, describing how people in a comfortable ("cold") state consistently underestimate how much a visceral state — pain, cold, exhaustion, fear — dictates behavior in someone experiencing it.</p>
+  </details>
+  <details class="faq-item">
+    <summary>Why does intermittent reinforcement make a volatile dynamic feel more intense?</summary>
+    <p>Unpredictable reward delivery produces larger dopamine surges than predictable reward, per reward-prediction-error research (Schultz, Dayan &amp; Montague, 1997). Warmth that arrives unpredictably after friction is neurologically more potent than steady, reliable warmth — which is part of why volatile connections can feel more intense than stable ones, at least early on.</p>
+  </details>
+  <details class="faq-item">
+    <summary>What is DARVO?</summary>
+    <p>DARVO — Deny, Attack, Reverse Victim and Offender — is a response pattern identified by psychologist Jennifer Freyd in which a person confronted with accountability denies wrongdoing, attacks the accuser's credibility, and recasts themselves as the injured party.</p>
+  </details>
+
+  <section id="sources">
+    <div class="divider"></div>
+    <h2>Sources</h2>
+    <div class="sources-grid">
+      <div>Loewenstein, G. (1996). Out of Control: Visceral Influences on Behavior. <em>Organizational Behavior and Human Decision Processes.</em></div>
+      <div>Loewenstein, G. (2005). Hot-Cold Empathy Gaps. <em>Multidisciplinary Perspectives on Emotion.</em></div>
+      <div>Van Boven, L., &amp; Loewenstein, G. (2003). Social Projection of Transient Visceral States. <em>Personality and Social Psychology Bulletin.</em></div>
+      <div>Nordgren, L. F., van der Pligt, J., &amp; van Harreveld, F. (2006). Unpacking the Hot-Cold Empathy Gap. <em>Social Cognition.</em></div>
+      <div>Nordgren, L. F., Banas, K., &amp; MacDonald, G. (2011). Empathy Gaps for Social and Physical Pain. <em>Journal of Personality and Social Psychology.</em></div>
+      <div>Schultz, W., Dayan, P., &amp; Montague, R. (1997). A Neural Substrate of Prediction and Reward. <em>Science.</em></div>
+      <div>Dutton, D. G., &amp; Painter, S. (1981). Traumatic Bonding. <em>Victimology.</em></div>
+      <div>Leknes, S., et al. (2011). Relief as a Reward. <em>PNAS.</em></div>
+      <div>Freyd, J. J. DARVO: Deny, Attack, and Reverse Victim and Offender.</div>
+      <div>Bandura, A. (1999). Moral Disengagement in the Perpetration of Inhumanities. <em>Personality and Social Psychology Review.</em></div>
+      <div>Kernberg, O. (1975). Borderline Conditions and Pathological Narcissism.</div>
+      <div>Gottman, J. M., &amp; Levenson, R. W. (2002). A Two-Factor Model for Predicting Divorce. <em>Family Process.</em></div>
+      <div>Eisenberger, N. I., Lieberman, M. D., &amp; Williams, K. D. (2003). Does Rejection Hurt? <em>Science.</em></div>
+      <div>Danziger, S., Levav, J., &amp; Avnaim-Pesso, L. (2011). Extraneous Factors in Judicial Decisions. <em>PNAS.</em></div>
+      <div>Freud, S. (1938). Splitting of the Ego in the Process of Defence.</div>
+      <div>Goffman, E. (1959). The Presentation of Self in Everyday Life.</div>
+      <div>Winnicott, D. W. (1960). Ego Distortion in Terms of True and False Self.</div>
+      <div>Laing, R. D. (1960). The Divided Self.</div>
+      <div>Fairbairn, W. R. D. (1952). Psychoanalytic Studies of the Personality.</div>
+      <div>Mullainathan, S., &amp; Shafir, E. (2013). Scarcity: Why Having Too Little Means So Much.</div>
+      <div>Kohut, H. (1971). The Analysis of the Self.</div>
+      <div>Clarkin, J. F., Yeomans, F. E., &amp; Kernberg, O. (2006). Psychotherapy for Borderline Personality: Focusing on Object Relations.</div>
+      <div>Paulhus, D. L. (1998). Interpersonal and Intrapsychic Adaptiveness of Trait Self-Enhancement. <em>Journal of Personality and Social Psychology.</em></div>
+      <div>Campbell, W. K., Foster, C. A., &amp; Finkel, E. J. (2002). Does Self-Love Lead to Love for Others? <em>Journal of Personality and Social Psychology.</em></div>
+      <div>Back, M. D., Schmukle, S. C., &amp; Egloff, B. (2010). Why Are Narcissists So Charming at First Sight? <em>Journal of Personality and Social Psychology.</em></div>
+      <div>Schwartz, R. C. (1995). Internal Family Systems Therapy.</div>
+      <div>van der Hart, O., Nijenhuis, E., &amp; Steele, K. (2006). The Haunted Self: Structural Dissociation and the Treatment of Chronic Traumatization.</div>
+      <div>Stevenson, R. L. (1886). Strange Case of Dr Jekyll and Mr Hyde.</div>
+      <div>Shelley, M. (1818). Frankenstein.</div>
+      <div>Wilde, O. (1890). The Picture of Dorian Gray.</div>
+      <div>Hugo, V. (1831). Notre-Dame de Paris.</div>
+      <div>Bettelheim, B. (1976). The Uses of Enchantment.</div>
+      <div>Plato (c. 370 BCE). Phaedrus.</div>
+      <div>Haidt, J. (2006). The Happiness Hypothesis.</div>
+      <div>Schopenhauer, A. (1819). The World as Will and Representation.</div>
+      <div>Nietzsche, F. (1886). Beyond Good and Evil.</div>
+      <div>Adler, A. (1927). Understanding Human Nature.</div>
+      <div>Jung, C. G. (1934–1939). Nietzsche's Zarathustra Seminars.</div>
+      <div>Rogers, C. R. (1959). A Theory of Therapy, Personality, and Interpersonal Relationships.</div>
+      <div>Buber, M. (1923). Ich und Du (I and Thou).</div>
+      <div>Freud, S. (1922). Das Medusenhaupt (Medusa's Head).</div>
+      <div>Bateson, G. (1956). Toward a Theory of Schizophrenia (the double bind).</div>
+      <div>Skinner, B. F. (1938). The Behavior of Organisms (extinction bursts).</div>
+    </div>
+  </section>
+
+  <div class="share-bar">
+    <span>SHARE</span>
+    <a href="https://twitter.com/intent/tweet?url=https://sauerninja.github.io/fire-and-ice/&text=Fire%20and%20Ice%3A%20The%20Psychology%20of%20the%20Hot-Cold%20Divide" aria-label="Share on X" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M18.9 2H22l-7.6 8.7L23 22h-6.9l-5.4-6.6L4.5 22H1.3l8.1-9.3L1 2h7l4.9 6.1L18.9 2Zm-1.2 18h1.9L7.4 4H5.4l12.3 16Z"/></svg>
+    </a>
+    <a href="https://www.reddit.com/submit?url=https://sauerninja.github.io/fire-and-ice/&title=Fire%20and%20Ice%3A%20The%20Psychology%20of%20the%20Hot-Cold%20Divide" aria-label="Share on Reddit" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm5.2 10.7a1.4 1.4 0 0 1-1.4 1.4c-.3 0-.6-.1-.8-.3-1 .7-2.4 1.1-3.9 1.2l.7-3.3 2.3.5a1 1 0 1 0 .1-.5l-2.5-.5a.25.25 0 0 0-.3.2l-.8 3.6c-1.6-.1-3-.5-4-1.2-.2.2-.5.3-.8.3a1.4 1.4 0 0 1-.7-2.6c0-.1-.1-.3-.1-.4 0-1.8 2.1-3.3 4.7-3.4l.9-2.9 2.9.6a1 1 0 1 0 .1-.5l-3.2-.7a.25.25 0 0 0-.3.2l-1 3.2c-2.6.1-4.7 1.6-4.7 3.5 0 .1 0 .3.1.4a1.4 1.4 0 0 0 .6 2.6ZM10 12.9a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8Zm4 0a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8Zm-3.9 3a3.6 3.6 0 0 0 3.8 0 .3.3 0 1 1 .3.5 4.3 4.3 0 0 1-4.4 0 .3.3 0 1 1 .3-.5Z"/></svg>
+    </a>
+    <a href="mailto:?subject=Fire%20and%20Ice&body=https://sauerninja.github.io/fire-and-ice/" aria-label="Share by email">
+      <svg viewBox="0 0 24 24"><path d="M2 4h20v16H2V4Zm2 2v.2l8 6.4 8-6.4V6H4Zm16 2.5-7.4 5.9a1 1 0 0 1-1.2 0L4 8.5V18h16V8.5Z"/></svg>
+    </a>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 Fire &amp; Ice. Research article based on thoughts by Setvin Noether (<a href="https://github.com/SauerNinja">@SauerNinja</a>).</p>
+</footer>
+
+<div id="cookie-banner">
+  <p>This site uses analytics cookies to understand readership.</p>
+  <button id="cookie-ok">OK</button>
+</div>
+
+<script>
+  // Reading progress bar
+  window.addEventListener('scroll', function(){
+    var h = document.documentElement;
+    var scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+    document.getElementById('progress-bar').style.width = scrolled + '%';
+  });
+
+  // Cookie consent
+  (function(){
+    var banner = document.getElementById('cookie-banner');
+    if (localStorage.getItem('cookie-consent') === 'granted') {
+      banner.style.display = 'none';
+      gtag('consent', 'update', {'analytics_storage': 'granted'});
+    }
+    document.getElementById('cookie-ok').addEventListener('click', function(){
+      localStorage.setItem('cookie-consent', 'granted');
+      gtag('consent', 'update', {'analytics_storage': 'granted'});
+      banner.style.display = 'none';
+    });
+  })();
+</script>
+</body>
+</html>
