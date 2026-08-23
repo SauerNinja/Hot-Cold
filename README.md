@@ -1,6 +1,6 @@
-![Fire and Ice hero image](hero.png)
+![Hot and Cold hero image](hero.png)
 
-# Fire and Ice: The Psychology of the Hot-Cold Divide
+# Hot and Cold: The Psychology of Comfort and Crisis
 
 This is a research article based on thoughts by Setvin Noether (@SauerNinja) exploring why comfort and crisis so often fail to understand each other. It traces the hot-cold empathy gap (George Loewenstein) through intermittent reinforcement and reward-prediction-error dopamine research, DARVO and moral disengagement (Jennifer Freyd, Albert Bandura), John Gottman's research on contempt, the psychology of the divided self (Freud, Goffman, Winnicott, Laing), and behavioral extinction theory — closing with a set of honestly stated open questions about the limits of the framework.
 
